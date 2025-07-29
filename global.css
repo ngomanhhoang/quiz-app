@@ -1,0 +1,12 @@
+:root {
+    --bg-primary: #F0F9FF;
+    --bg-section: #FFFFFF;
+    --bg-navbar: #2563EB;
+    --accent: #F59E0B;
+    --text-primary: #1E3A8A;
+    --text-light: #FFFFFF;
+    --border: #60A5FA;
+    --bg-dark-mode: #1E3A8A;
+    --text-dark-mode: #E5E7EB;
+    --button-hover: #FBBF24;
+}
