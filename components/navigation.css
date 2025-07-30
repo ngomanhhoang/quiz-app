@@ -1,49 +1,37 @@
-:root {
-    --bg-primary: #FEF6F4; /* Main background: soft peach */
-    --bg-section: #FFFFFF; /* Section background: white */
-    --bg-navbar: #2DD4BF; /* Navbar background: teal */
-    --accent: #F472B6; /* Accent: coral pink */
-    --text-primary: #1C2526; /* Primary text: deep charcoal */
-    --text-light: #FFFFFF; /* Text on dark backgrounds: white */
-    --border: #5EEAD4; /* Border: light teal */
-    --bg-dark-mode: #134E4A; /* Dark mode background: dark teal */
-    --text-dark-mode: #F1F5F9; /* Dark mode text: soft gray */
-    --button-hover: #FB7185; /* Button/icon hover: lighter coral */
-}
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-weight: 400;
   margin: 0;
-  padding-bottom: 2rem;
 }
 
 .container {
-    margin: 0 auto;
-    padding-bottom: 40px;
+  margin: 0 auto;
 }
 
 header {
   text-align: center;
-  padding: 20px 0;
+  padding: 0.5rem;
   background-color: var(--bg-section);
   border-radius: 12px;
   border-bottom: 2px solid var(--border);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .title {
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin: 0;
 }
 
 main {
-    margin: 30px 20px 30px;
+  margin: 140px 20px 100px;
 }
 
 .profile {
@@ -76,10 +64,10 @@ main {
 
 .info {
   background-color: var(--bg-navbar);
-    padding: 20px;
-    border-radius: 12px;
-    color: var(--text-light);
-    margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  color: var(--text-light);
+  margin-bottom: 30px;
 }
 
 .info h2 {
@@ -92,36 +80,85 @@ main {
 }
 
 .info li {
-    list-style: none;
-    line-height: 1.5;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--text-light);
+  list-style: none;
+  line-height: 1.5;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--text-light);
 }
 
 /* Toggle */
 
 .setting {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--bg-section);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+  background-color: var(--bg-section);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
 }
 
-.setting__icon {
-    width: 50px;
-    height: 50px;
+.setting h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  color: var(--text-primary);
 }
 
 .setting__toggle {
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 10px;
 }
 
-.set {
-  padding: 1rem;
+.setting__toggle--switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.setting__toggle--switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.setting--slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+  transition: background-color 0.3s;
+  border-radius: 24px;
+}
+
+.setting--slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--text-light);
+    transition: transform 0.3s;
+    border-radius: 50%;
+}
+
+.setting__toggle--switch input:checked + .setting--slider {
+    background-color: var(--bg-navbar); /* Teal khi bật */
+}
+
+.setting__toggle--switch input:checked + .setting--slider:before {
+    transform: translateX(26px); /* Di chuyển nút tròn sang phải */
+}
+
+.setting__toggle--switch input:hover + .setting--slider {
+    background-color: var(--button-hover); /* Lighter coral khi hover */
 }
 
 /* Counted */
@@ -143,43 +180,47 @@ main {
   min-width: 100px;
 }
 .counted__bookmarks img,
-.counted__question img{
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
+.counted__question img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
 }
 
-.counted__question span, .counted__bookmarks span {
+.counted__question span,
+.counted__bookmarks span {
   color: var(--accent);
   font-size: 1.4rem;
   align-self: center;
 }
 
 /* NAVBAR */
-.navbar {
+
+footer {
   position: fixed;
-  padding: 0 0 20px 0;
   bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-around;
   width: 100%;
+}
+.navbar {
+  display: flex;
+}
+
+.navbar__item {
+  flex-grow: 1;
+  text-align: center;
   background: var(--bg-navbar);
-  border-top: 2px solid var(--accent);
-  gap: 40px;
+  padding: 16px;
 }
 
-.nav__item {
-  padding-bottom: 10px;
-  padding-top: 10px;
-  width: 50px;
-  height: 50px;
-  opacity: 0.7;
+.navbar__item img {
+  width: 25px;
+  height: 25px;
+  opacity: 0.5;
 }
 
-.navbar img {
-    width: 50px;
-    height: 50px;
-    opacity: 0.5;
+.navbar__item.active {
+  background-color: var(--accent);
 }
 
+.navbar__item.active img {
+  opacity: 1;
+}

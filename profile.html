@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./components/navigation.css" />
     <title>Leonardo da Vinci's Profile</title>
   </head>
@@ -20,9 +21,8 @@
           />
           <h3 class="profile__name">Leonardo da Vinci</h3>
         </div>
-
+        <h2>About me</h2>
         <ul class="info">
-          <h2>About me</h2>
           <li>
             Born in Vinci, I paint mysteries like the Mona Lisa and dream up
             machines that challenge the skies.
@@ -50,24 +50,27 @@
           </div>
         </section>
 
-
-        <h2 class="set">Settings</h2>
+        
         <section class="setting">
-          <div class="setting__toggle">Dark Mode</div>
-          <div class="setting__icon">
-            <img src="assets/icons/toggle.svg" alt="" />
+          <h2>Settings</h2>
+          <div class="setting__toggle">Dark Mode
+            <label class="setting__toggle--switch">
+              <input type="checkbox" id="darkModeToggle">
+              <span class="setting--slider"></span>
+            </label>
           </div>
+          
         </section>
       </main>
 
       <footer class="navbar">
-        <a href="index.html" class="nav__item">
+        <a href="index.html" class="navbar__item">
           <img src="assets/icons/house.svg" alt="homepage" />
         </a>
-        <a href="bookmarks.html" class="nav__item">
+        <a href="bookmarks.html" class="navbar__item">
           <img src="assets/icons/bookmark.svg" alt="bookmark page" />
         </a>
-        <a href="profile.html" class="nav__item active">
+        <a href="profile.html" class="navbar__item active">
           <img src="assets/icons/user.svg" alt="profile page" />
         </a>
       </footer>
