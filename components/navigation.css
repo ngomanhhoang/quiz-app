@@ -1,16 +1,15 @@
 :root {
-    --bg-primary: #F0F9FF;
-    --bg-section: #FFFFFF;
-    --bg-navbar: #2563EB;
-    --accent: #F59E0B;
-    --text-primary: #1E3A8A;
-    --text-light: #FFFFFF;
-    --border: #60A5FA;
-    --bg-dark-mode: #1E3A8A;
-    --text-dark-mode: #E5E7EB;
-    --button-hover: #FBBF24;
+    --bg-primary: #FEF6F4; /* Main background: soft peach */
+    --bg-section: #FFFFFF; /* Section background: white */
+    --bg-navbar: #2DD4BF; /* Navbar background: teal */
+    --accent: #F472B6; /* Accent: coral pink */
+    --text-primary: #1C2526; /* Primary text: deep charcoal */
+    --text-light: #FFFFFF; /* Text on dark backgrounds: white */
+    --border: #5EEAD4; /* Border: light teal */
+    --bg-dark-mode: #134E4A; /* Dark mode background: dark teal */
+    --text-dark-mode: #F1F5F9; /* Dark mode text: soft gray */
+    --button-hover: #FB7185; /* Button/icon hover: lighter coral */
 }
-
 * {
   box-sizing: border-box;
 }
@@ -19,8 +18,13 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-weight: 400;
-  margin: 0 2rem 3rem 2rem;
+  margin: 0;
   padding-bottom: 2rem;
+}
+
+.container {
+    margin: 0 auto;
+    padding-bottom: 40px;
 }
 
 header {
@@ -39,7 +43,7 @@ header {
 }
 
 main {
-    margin: 30px 0;
+    margin: 30px 20px 30px;
 }
 
 .profile {
@@ -111,15 +115,13 @@ main {
 }
 
 .setting__toggle {
-    font-size: 24px;
+    font-size: 1rem;
     font-weight: bold;
     padding: 1rem;
 }
 
 .set {
   padding: 1rem;
-  border: 1px solid var(--border);
-  border-radius: 12px;
 }
 
 /* Counted */
@@ -156,15 +158,15 @@ main {
 /* NAVBAR */
 .navbar {
   position: fixed;
-  padding: 10px 0;
+  padding: 0 0 20px 0;
   bottom: 0;
   left: 0;
   display: flex;
   justify-content: space-around;
-  border: 1px solid #000;
   width: 100%;
   background: var(--bg-navbar);
   border-top: 2px solid var(--accent);
+  gap: 40px;
 }
 
 .nav__item {
