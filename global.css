@@ -1,12 +1,12 @@
 :root {
-    --bg-primary: #F0F9FF;
-    --bg-section: #FFFFFF;
-    --bg-navbar: #2563EB;
-    --accent: #F59E0B;
-    --text-primary: #1E3A8A;
-    --text-light: #FFFFFF;
-    --border: #60A5FA;
-    --bg-dark-mode: #1E3A8A;
-    --text-dark-mode: #E5E7EB;
-    --button-hover: #FBBF24;
+    --bg-primary: #FEF6F4; /* Main background: soft peach */
+    --bg-section: #FFFFFF; /* Section background: white */
+    --bg-navbar: #2DD4BF; /* Navbar background: teal */
+    --accent: #F472B6; /* Accent: coral pink */
+    --text-primary: #1C2526; /* Primary text: deep charcoal */
+    --text-light: #FFFFFF; /* Text on dark backgrounds: white */
+    --border: #5EEAD4; /* Border: light teal */
+    --bg-dark-mode: #134E4A; /* Dark mode background: dark teal */
+    --text-dark-mode: #F1F5F9; /* Dark mode text: soft gray */
+    --button-hover: #FB7185; /* Button/icon hover: lighter coral */
 }

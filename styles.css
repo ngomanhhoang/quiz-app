@@ -12,6 +12,11 @@ body {
     margin: 0;
 }
 
+.container {
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
 header {
     padding: 0.5rem;
     background-color: var(--bg-section);
@@ -29,13 +34,13 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin: 0 2rem 3rem 2rem;
+    margin: 2rem 2rem 3rem 2rem;
 }
 
 .card {
     background-color: var(--bg-section);
     padding: 1rem;
-    margin: 30px 20px;
+    margin: 20px 10px;
     border: 1px solid var(--border);
     border-radius: 12px;
     position: relative;
@@ -101,7 +106,7 @@ main {
     border-top: 2px solid var(--accent);
     width: 100%;
     background-color: var(--bg-navbar);
-    padding: 20px 0;
+    padding: 10px 0 30px 0;
     gap: 40px;
 }
 
