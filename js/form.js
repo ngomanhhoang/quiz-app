@@ -3,9 +3,8 @@ const form = document.querySelector("form");
 const questionCount = document.querySelector('[data-js="question__count"]');
 const answerCount = document.querySelector('[data-js="answer__count"]');
 const input = document.querySelector('[data-js="input"]');
-const questionInput = document.querySelector('[data-js="question__input"]')
-const answerInput = document.querySelector('[data-js="answer__input"]')
-const maxLength = 150;
+const questionInput = document.querySelector('[data-js="question__input"]');
+const answerInput = document.querySelector('[data-js="answer__input"]');
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -41,23 +40,36 @@ form.addEventListener("submit", (e) => {
   ul.append(li, li, li);
   section.append(img, h2, p, button, ul);
   main.append(section);
+
+  img.addEventListener("click", (e) => {
+    e.preventDefault();
+    const currentSrc = e.target.src;
+    if (currentSrc.endsWith("bookmark.svg")) {
+      e.target.src = "./assets/icons/bookmark-solid.svg";
+      console.log(currentSrc);
+    } else {
+      e.target.src = "./assets/icons/bookmark.svg";
+    }
+  });
+
+  // Show Answer
+  button.addEventListener("click", () => {
+    if (p.classList.toggle("hidden")) {
+      button.innerHTML = `Show Answer`;
+    } else {
+      button.innerHTML = `Hide Answer`;
+    }
+  });
 });
 
-// input.addEventListener("input", () => {
-//   const currentLength = input.value.length;
-//   const characters = maxLength - currentLength;
-//   console.log(characters);
-//   characterLeft.textContent = `${characters} characters left`;
-// });
-
 function count(e) {
-    const maxLength = 150;
-    const characters = maxLength - e.target.value.length
-    if(e.target.id === "question") {
-        questionCount.textContent = `${characters} characters left`;
-    }else if(e.target.id === "answer") {
-        answerCount.textContent = `${characters} characters left`;
-    }
+  const maxLength = 150;
+  const characters = maxLength - e.target.value.length;
+  if (e.target.id === "question") {
+    questionCount.textContent = `${characters} characters left`;
+  } else if (e.target.id === "answer") {
+    answerCount.textContent = `${characters} characters left`;
+  }
 }
-questionInput.addEventListener("input", count)
-answerInput.addEventListener("input", count)
+questionInput.addEventListener("input", count);
+answerInput.addEventListener("input", count);

@@ -24,18 +24,6 @@ header {
   width: 100%;
 }
 
-/* header {
-  padding: 0.5rem;
-  background-color: var(--bg-section);
-  border-bottom: 2px solid var(--border);
-  border-radius: 12px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  text-align: center;
-} */
-
 .title {
   font-size: 2rem;
   font-weight: 700;
@@ -151,27 +139,27 @@ main {
 }
 
 .setting--slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 2px;
-    bottom: 2px;
-    background-color: var(--text-light);
-    transition: transform 0.3s;
-    border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--text-light);
+  transition: transform 0.3s;
+  border-radius: 50%;
 }
 
 .setting__toggle--switch input:checked + .setting--slider {
-    background-color: var(--bg-navbar); /* Teal khi bật */
+  background-color: var(--bg-navbar);
 }
 
 .setting__toggle--switch input:checked + .setting--slider:before {
-    transform: translateX(26px); /* Di chuyển nút tròn sang phải */
+  transform: translateX(26px);
 }
 
 .setting__toggle--switch input:hover + .setting--slider {
-    background-color: var(--button-hover); /* Lighter coral khi hover */
+  background-color: var(--button-hover);
 }
 
 /* Counted */
