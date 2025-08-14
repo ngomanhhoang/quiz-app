@@ -9,3 +9,15 @@ cardBookmark.addEventListener("click", (e) => {
         e.target.src = "./assets/icons/bookmark.svg"
     }
 })
+
+
+// Show Answer
+const cardButton = document.querySelector('[data-js="card__button"]')
+const cardAnswer = document.querySelector('[data-js="card__answer"]')
+cardButton.addEventListener("click", () => {
+    if(cardAnswer.classList.toggle("hidden")) {
+        cardButton.innerHTML = `Show Answer`
+    }else {
+        cardButton.innerHTML = `Hide Answer`
+    }
+})

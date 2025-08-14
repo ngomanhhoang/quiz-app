@@ -24,10 +24,23 @@ header {
   width: 100%;
 }
 
+/* header {
+  padding: 0.5rem;
+  background-color: var(--bg-section);
+  border-bottom: 2px solid var(--border);
+  border-radius: 12px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+} */
+
 .title {
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
+  height: 39.2px;
 }
 
 main {
