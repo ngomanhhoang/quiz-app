@@ -38,7 +38,10 @@ main {
   margin: 150px 0 100px;
 }
 
-.question, .answer, .tag, .submit{
+.question,
+.answer,
+.tag,
+.submit {
   margin: 2rem 2rem;
   padding: 10px;
   background-color: var(--bg-section);
@@ -55,14 +58,18 @@ main {
   cursor: pointer;
 }
 
-.question, .answer, .tag {
+.question,
+.answer,
+.tag {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   text-align: left;
 }
 
-.question textarea, .answer textarea, .tag input {
+.question textarea,
+.answer textarea,
+.tag input {
   padding: 1rem 1rem;
 }
 
@@ -168,4 +175,3 @@ footer {
 .navbar__item.active {
   background-color: var(--accent);
 }
-
