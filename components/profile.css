@@ -24,11 +24,20 @@ header {
   width: 100%;
 }
 
+.darkmode header {
+  background-color: var(--bg-dark-mode);
+  border-bottom: 2px solid var(--border);
+}
+
 .title {
   font-size: 2rem;
   font-weight: 700;
   color: var(--text-primary);
   height: 39.2px;
+}
+
+.darkmode .title {
+  color: var(--text-dark-mode);
 }
 
 main {
@@ -47,10 +56,18 @@ main {
   margin-bottom: 30px;
 }
 
+.darkmode .profile {
+  background-color: var(--bg-dark-mode);
+  border-bottom: 2px solid var(--border);
+}
+
 .profile__name {
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--text-primary);
+}
+.darkmode .profile__name {
+  color: var(--text-dark-mode);
 }
 
 .profile__avatar {
@@ -71,13 +88,23 @@ main {
   margin-bottom: 30px;
 }
 
-.info h2 {
+.about {
   font-size: 1.3rem;
+}
+
+.darkmode .about {
+  color: var(--text-dark-mode);
 }
 
 .info ul {
   padding: 0;
   margin: 0;
+}
+
+.darkmode .info {
+  background-color: var(--bg-dark-mode);
+  border: 2px solid var(--border);
+  color: var(--text-dark-mode);
 }
 
 .info li {
@@ -97,6 +124,15 @@ main {
   margin-bottom: 30px;
 }
 
+.darkmode .setting {
+  background-color: var(--bg-dark-mode);
+  border-bottom: 2px solid var(--border);
+}
+
+.darkmode .setting h2, .darkmode .setting__toggle {
+  color: var(--text-dark-mode);
+}
+
 .setting h2 {
   font-size: 1.3rem;
   font-weight: 600;
@@ -111,6 +147,7 @@ main {
   font-size: 1rem;
   font-weight: 400;
   padding: 10px;
+  color: var(--text-primary);
 }
 
 .setting__toggle--switch {
@@ -162,6 +199,11 @@ main {
   background-color: var(--button-hover);
 }
 
+.darkmode {
+  background-color: var(--bg-dark-mode);
+  color: var(--text-dark-mode);
+}
+
 /* Counted */
 .counted {
   display: flex;
@@ -180,6 +222,14 @@ main {
   border: 1px solid var(--border);
   min-width: 100px;
 }
+
+.darkmode .counted__question, .darkmode .counted__bookmarks {
+  background-color: var(--bg-dark-mode);
+  border-bottom: 2px solid var(--border);
+}
+
+
+
 .counted__bookmarks img,
 .counted__question img {
   width: 25px;
@@ -192,6 +242,10 @@ main {
   color: var(--accent);
   font-size: 1.4rem;
   align-self: center;
+}
+
+.darkmode .counted__question span, .darkmode .counted__bookmarks span {
+  color: var(--text-dark-mode);
 }
 
 /* NAVBAR */
