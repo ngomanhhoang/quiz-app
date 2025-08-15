@@ -114,6 +114,10 @@ main {
   border-bottom: 1px solid var(--text-light);
 }
 
+.darkmode .info li {
+  border-bottom: 1px solid var(--border);
+}
+
 /* Toggle */
 
 .setting {
