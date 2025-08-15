@@ -40,21 +40,29 @@ main {
 
 .question,
 .answer,
-.tag,
-.submit {
+.tag {
   margin: 2rem 2rem;
   padding: 10px;
   background-color: var(--bg-section);
   border: 1px solid var(--border);
   border-radius: 12px;
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .submit {
-  margin: 0.5rem 0;
+  margin: 1rem 2rem;
   padding: 1rem 2rem;
+  background-color: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text-light);
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .submit:hover {
+  background-color: var(--button-hover);
   cursor: pointer;
 }
 
@@ -71,6 +79,9 @@ main {
 .answer textarea,
 .tag input {
   padding: 1rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
 }
 
 span {
@@ -78,6 +89,7 @@ span {
   text-align: right;
   margin: 0;
   font-size: 0.8rem;
+  color: var(--text-primary);
 }
 
 /* Card */
